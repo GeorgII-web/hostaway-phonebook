@@ -1,0 +1,60 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API",
+        "description": "Hostaway Phonebook API",
+        "contact": {
+            "email": "george.webfullstack@gmail.com"
+        },
+        "version": "0.1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost",
+            "description": "Api Server"
+        }
+    ],
+    "paths": {
+        "/api/items/{id}": {
+            "get": {
+                "summary": "Get item by id",
+                "description": "Returns item from phonebook",
+                "operationId": "App\\Http\\Controllers\\ItemController::get",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Item id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Item successfully got"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "404": {
+                        "description": "Item not found"
+                    },
+                    "422": {
+                        "description": "Item get error"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Items",
+            "description": "Hostaway phonebook items"
+        }
+    ],
+    "security": [
+        []
+    ]
+}
