@@ -22,7 +22,7 @@ jobs:
       with:
         mysql-version: '8.0'
         user: root
-        password: pass
+        password: passPASSpass
     - name: Create table
       run: mysql -uroot -h127.0.0.1 -e 'CREATE DATABASE phone_book;'     
     
@@ -50,7 +50,7 @@ jobs:
         DB_DATABASE: 'phone_book'
         DB_PORT: 3306
         DB_USER: 'root'
-        DB_PASSWORD: 'pass'
+        DB_PASSWORD: 'passPASSpass'
 #       env:
 #         DB_CONNECTION: sqlite
 #         DB_DATABASE: database/database.sqlite
@@ -62,7 +62,7 @@ jobs:
         DB_DATABASE: 'phone_book'
         DB_PORT: 3306
         DB_USER: 'root'
-        DB_PASSWORD: 'pass'
+        DB_PASSWORD: 'passPASSpass'
 #       env:
 #         DB_CONNECTION: sqlite
 #         DB_DATABASE: database/database.sqlite
@@ -76,5 +76,5 @@ jobs:
         DB_DATABASE: 'phone_book'
         DB_PORT: 3306
         DB_USER: 'root'
-        DB_PASSWORD: 'pass'
+        DB_PASSWORD: 'passPASSpass'
       run: vendor/bin/pest
