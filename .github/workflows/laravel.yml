@@ -16,6 +16,10 @@ jobs:
       with:
         php-version: '8.0'
     - uses: actions/checkout@v2
+    - name: Start Redis
+      uses: supercharge/redis-github-action@1.2.0
+      with:
+        redis-version: 6 
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
