@@ -21,7 +21,7 @@ jobs:
     - uses: shogo82148/actions-setup-mysql@v1
       with:
         mysql-version: '8.0'
-        user: root
+        user: apiuser
         password: passPASSpass
     - name: Create table
       run: mysql -uroot -h127.0.0.1 -e 'CREATE DATABASE phone_book;'     
@@ -49,7 +49,7 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_DATABASE: 'phone_book'
         DB_PORT: 3306
-        DB_USER: 'root'
+        DB_USER: 'apiuser'
         DB_PASSWORD: 'passPASSpass'
 #       env:
 #         DB_CONNECTION: sqlite
@@ -61,7 +61,7 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_DATABASE: 'phone_book'
         DB_PORT: 3306
-        DB_USER: 'root'
+        DB_USER: 'apiuser'
         DB_PASSWORD: 'passPASSpass'
 #       env:
 #         DB_CONNECTION: sqlite
@@ -75,6 +75,6 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_DATABASE: 'phone_book'
         DB_PORT: 3306
-        DB_USER: 'root'
+        DB_USER: 'apiuser'
         DB_PASSWORD: 'passPASSpass'
       run: vendor/bin/pest
