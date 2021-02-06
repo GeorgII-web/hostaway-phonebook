@@ -17,6 +17,9 @@
     "paths": {
         "/api/items/{id}": {
             "get": {
+                "tags": [
+                    "Items"
+                ],
                 "summary": "Get item by id",
                 "description": "Returns item from phonebook",
                 "operationId": "App\\Http\\Controllers\\ItemController::get",

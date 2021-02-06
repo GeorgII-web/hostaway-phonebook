@@ -24,6 +24,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
  *      url="http://localhost",
  *      description="Api Server"
  * )
+ * @OA\Tag(name="Items", description="Hostaway phonebook items")
  */
 class ItemController extends Controller
 {
@@ -118,11 +119,10 @@ class ItemController extends Controller
     /**
      * Get item by id.
      *
-     * @OA\Tag(name="Items", description="Hostaway phonebook items")
-     *
      * @OA\Get(
      *     path="/api/items/{id}",
      *     summary="Get item by id",
+     *     tags={"Items"},
      *     description="Returns item from phonebook",
      *     @OA\Parameter(
      *          name="id",

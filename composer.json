@@ -66,6 +66,11 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "test": [
+            "Composer\\Config::disableProcessTimeout",
+            "./vendor/bin/pest"
         ]
-    }
+    },
+
 }
