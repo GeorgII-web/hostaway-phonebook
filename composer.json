@@ -71,6 +71,5 @@
             "Composer\\Config::disableProcessTimeout",
             "./vendor/bin/pest"
         ]
-    },
-
+    }
 }
