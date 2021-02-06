@@ -14,11 +14,17 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 /**
  * @OA\Info(
  *     title="API",
- *     description="Hostaway Phonebook API",
+ *     description="Hostaway Phonebook API. Test API token for authorization '24f56647eddc650bd0904883dd7168e609017696cf69714fe7d1224012491710'.",
  *     version="0.1",
  *      @OA\Contact(
  *          email="george.webfullstack@gmail.com"
  *      ),
+ * )
+ * @OA\SecurityScheme(
+ *     securityScheme="apiToken",
+ *     type="apiKey",
+ *     in="query",
+ *     name="api_token",
  * )
  * @OA\Server(
  *      url="http://localhost",
@@ -124,6 +130,7 @@ class ItemController extends Controller
      *     summary="Get item by id",
      *     tags={"Items"},
      *     description="Returns item from phonebook",
+     *     security={{"apiToken": {"read:items"}}},
      *     @OA\Parameter(
      *          name="id",
      *          description="Item id",

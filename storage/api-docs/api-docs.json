@@ -2,7 +2,7 @@
     "openapi": "3.0.0",
     "info": {
         "title": "API",
-        "description": "Hostaway Phonebook API",
+        "description": "Hostaway Phonebook API. Test API token for authorization '24f56647eddc650bd0904883dd7168e609017696cf69714fe7d1224012491710'.",
         "contact": {
             "email": "george.webfullstack@gmail.com"
         },
@@ -47,7 +47,23 @@
                     "422": {
                         "description": "Item get error"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "apiToken": [
+                            "read:items"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "apiToken": {
+                "type": "apiKey",
+                "name": "api_token",
+                "in": "query"
             }
         }
     },
