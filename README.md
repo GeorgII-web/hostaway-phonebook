@@ -63,5 +63,10 @@ $ sail artisan optimize
 
 ##### 8. Test
 ```sh
-$ sail artisan test
+$ sail test
+```
+
+##### 9. Generate API documentation
+```sh
+$ sail artisan l5-swagger:generate
 ```
