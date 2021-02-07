@@ -70,11 +70,4 @@ jobs:
     - name: Optimize
       run: php artisan optimize
     - name: Testing
-      env:
-        DB_CONNECTION: mysql
-        DB_HOST: 127.0.0.1
-        DB_DATABASE: 'phone_book'
-        DB_PORT: 3306
-        DB_USER: 'apiuser'
-        DB_PASSWORD: 'passPASSpass'
       run: vendor/bin/pest
