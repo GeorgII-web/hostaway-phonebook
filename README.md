@@ -4,7 +4,7 @@
 
 ![Request](public/images/request.png?raw=true "Request")
 ![Documentation](public/images/docs.png?raw=true "Documentation")
-![Test](public/images/request.png?raw=true "Test")
+![Test](public/images/test.png?raw=true "Test")
 
 ### Features
 - API pagination with metadata
