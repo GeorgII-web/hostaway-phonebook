@@ -45,4 +45,21 @@ class ValidationService
         }
     }
 
+    /**
+     * Check search text.
+     *
+     * @param string $text Search text
+     * @throws InvalidArgumentException
+     */
+    public function checkSearchText(string $text): void
+    {
+        $validator = Validator::make(['search_text' => $text], [
+            'search_text' => ['alpha_dash', 'max:300'],
+        ]);
+
+        if ($validator->fails()) {
+            throw new InvalidArgumentException($validator->errors()->first());
+        }
+    }
+
 }
