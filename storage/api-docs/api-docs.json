@@ -72,7 +72,7 @@
                 "parameters": [
                     {
                         "name": "first_name",
-                        "in": "path",
+                        "in": "query",
                         "description": "Item first name",
                         "required": true,
                         "schema": {
@@ -81,7 +81,7 @@
                     },
                     {
                         "name": "last_name",
-                        "in": "path",
+                        "in": "query",
                         "description": "Item last name",
                         "required": false,
                         "schema": {
@@ -90,7 +90,7 @@
                     },
                     {
                         "name": "phone_number",
-                        "in": "path",
+                        "in": "query",
                         "description": "Item uniq phone number",
                         "required": true,
                         "schema": {
@@ -99,7 +99,7 @@
                     },
                     {
                         "name": "country_code",
-                        "in": "path",
+                        "in": "query",
                         "description": "Item country code",
                         "required": false,
                         "schema": {
@@ -108,7 +108,7 @@
                     },
                     {
                         "name": "timezone_name",
-                        "in": "path",
+                        "in": "query",
                         "description": "Item timezone",
                         "required": false,
                         "schema": {
