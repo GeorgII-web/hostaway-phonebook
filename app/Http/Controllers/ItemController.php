@@ -82,13 +82,13 @@ class ItemController extends Controller
      *     path="/api/items",
      *     summary="Get items",
      *     tags={"Items"},
-     *     description="Returns items from phonebook all or by query",
-     *     security={{"apiToken": {"read:items"}}},
+     *     description="Returns items from phonebook, all or filtered by the query",
+     *     security={{"apiToken": {}}},
      *     @OA\Parameter(
      *          name="q",
      *          description="Query text",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -97,14 +97,15 @@ class ItemController extends Controller
      *          name="page",
      *          description="Page number",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="integer"
      *          )
      *      ),
      *     @OA\Response(response="200", description="Success"),
      *     @OA\Response(response=401, description="Unauthorized"),
-     *     @OA\Response(response=422, description="Item get error"),
+     *     @OA\Response(response=404, description="Items not found"),
+     *     @OA\Response(response=422, description="Items get error"),
      * )
      * @param Request $request
      * @return JsonResponse
@@ -158,7 +159,7 @@ class ItemController extends Controller
      *     summary="Get item by id",
      *     tags={"Items"},
      *     description="Returns item from phonebook",
-     *     security={{"apiToken": {"read:items"}}},
+     *     security={{"apiToken": {}}},
      *     @OA\Parameter(
      *          name="id",
      *          description="Item id",
@@ -218,7 +219,7 @@ class ItemController extends Controller
      *     summary="Create item",
      *     tags={"Items"},
      *     description="Create item in phonebook",
-     *     security={{"apiToken": {"write:items"}}},
+     *     security={{"apiToken": {}}},
      *     @OA\Parameter(
      *          name="first_name",
      *          description="Item first name",
@@ -302,7 +303,7 @@ class ItemController extends Controller
      *     summary="Update item by id",
      *     tags={"Items"},
      *     description="Update item in phonebook",
-     *     security={{"apiToken": {"read:items"}}},
+     *     security={{"apiToken": {}}},
      *     @OA\Parameter(
      *          name="id",
      *          description="Item id",
@@ -407,7 +408,7 @@ class ItemController extends Controller
      *     summary="Delete item by id",
      *     tags={"Items"},
      *     description="Delete item from phonebook",
-     *     security={{"apiToken": {"read:items"}}},
+     *     security={{"apiToken": {}}},
      *     @OA\Parameter(
      *          name="id",
      *          description="Item id",

@@ -21,12 +21,12 @@
                     "Items"
                 ],
                 "summary": "Get items",
-                "description": "Returns items from phonebook all or by query",
+                "description": "Returns items from phonebook, all or filtered by the query",
                 "operationId": "App\\Http\\Controllers\\ItemController::index",
                 "parameters": [
                     {
                         "name": "q",
-                        "in": "path",
+                        "in": "query",
                         "description": "Query text",
                         "required": false,
                         "schema": {
@@ -35,7 +35,7 @@
                     },
                     {
                         "name": "page",
-                        "in": "path",
+                        "in": "query",
                         "description": "Page number",
                         "required": false,
                         "schema": {
@@ -50,15 +50,16 @@
                     "401": {
                         "description": "Unauthorized"
                     },
+                    "404": {
+                        "description": "Items not found"
+                    },
                     "422": {
-                        "description": "Item get error"
+                        "description": "Items get error"
                     }
                 },
                 "security": [
                     {
-                        "apiToken": [
-                            "read:items"
-                        ]
+                        "apiToken": []
                     }
                 ]
             },
@@ -129,9 +130,7 @@
                 },
                 "security": [
                     {
-                        "apiToken": [
-                            "write:items"
-                        ]
+                        "apiToken": []
                     }
                 ]
             }
@@ -171,9 +170,7 @@
                 },
                 "security": [
                     {
-                        "apiToken": [
-                            "read:items"
-                        ]
+                        "apiToken": []
                     }
                 ]
             },
@@ -211,9 +208,7 @@
                 },
                 "security": [
                     {
-                        "apiToken": [
-                            "read:items"
-                        ]
+                        "apiToken": []
                     }
                 ]
             },
@@ -296,9 +291,7 @@
                 },
                 "security": [
                     {
-                        "apiToken": [
-                            "read:items"
-                        ]
+                        "apiToken": []
                     }
                 ]
             }
