@@ -1,12 +1,12 @@
 # Hostaway phone book API project
 - API documentation [http://localhost/api/documentation](http://localhost/api/documentation)
-![Documentation](public/images/docs.png?raw=true "Documentation")
+- ![Documentation](public/images/docs.png?raw=true "Documentation")
 
 - Example query [http://localhost/api/items](http://localhost/api/items?api_token=24f56647eddc650bd0904883dd7168e609017696cf69714fe7d1224012491710)
-![Request](public/images/request.png?raw=true "Request")
+- ![Request](public/images/request.png?raw=true "Request")
 
 - Test results
-![Test](public/images/test.png?raw=true "Test")
+- ![Test](public/images/test.png?raw=true "Test")
 
 ### Features
 - API pagination with metadata
