@@ -6,7 +6,7 @@
 ### Features
 - API pagination with metadata
 - API auth token 
-- Logging all API queries to '', errors to '' 
+- Logging all API queries to 'api.log', errors to 'error.log' 
 - Caching external API calls
 - Docker support, Laravel sail
 - Open API [documentation](http://localhost/api/documentation)

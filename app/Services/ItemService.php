@@ -21,14 +21,12 @@ class ItemService
     /**
      * @var int Number of the transactions before fail.
      */
-    protected int $transactionRetry = 3;
+    protected int $transactionRetry;
 
     /**
      * @var int Request cache time.
      */
-    protected int $cacheTime = 60;
-
-    //todo env
+    protected int $cacheTime;
 
     /**
      * ItemService constructor.
@@ -41,6 +39,8 @@ class ItemService
         protected ValidationService $validationService
     )
     {
+        $this->transactionRetry = config('app.transaction_retry');
+        $this->cacheTime = config('app.hostaway_cache_time');
     }
 
     /**
@@ -172,7 +172,7 @@ class ItemService
      */
     public function findByName(string $text): LengthAwarePaginator
     {
-        //todo check text
+        $this->validationService->checkSearchText($text);
 
         try {
 

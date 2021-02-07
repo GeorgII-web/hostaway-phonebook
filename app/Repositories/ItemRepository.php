@@ -20,9 +20,7 @@ class ItemRepository
      */
     public function __construct(protected Item $item)
     {
-        //todo env
-        $this->itemsPerPage = 2; //config('api_items_per_page');
-        // dd(config('app.timezone'), env('API_ITEMS_PER_PAGE'));
+        $this->itemsPerPage = config('app.items_per_page');
     }
 
     /**
@@ -65,7 +63,6 @@ class ItemRepository
      */
     public function findByName(string $text): LengthAwarePaginator
     {
-        //todo clear text sql inject
         $result = $this->item::orderBy('id', 'desc')
             ->where('first_name', 'like', '%' . $text . '%')
             ->orWhere('last_name', 'like', '%' . $text . '%')

@@ -223,7 +223,7 @@ class ItemController extends Controller
      *          name="first_name",
      *          description="Item first name",
      *          required=true,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -232,7 +232,7 @@ class ItemController extends Controller
      *          name="last_name",
      *          description="Item last name",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -241,7 +241,7 @@ class ItemController extends Controller
      *          name="phone_number",
      *          description="Item uniq phone number",
      *          required=true,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -250,7 +250,7 @@ class ItemController extends Controller
      *          name="country_code",
      *          description="Item country code",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -259,7 +259,7 @@ class ItemController extends Controller
      *          name="timezone_name",
      *          description="Item timezone",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -316,7 +316,7 @@ class ItemController extends Controller
      *          name="first_name",
      *          description="Item first name",
      *          required=true,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -325,7 +325,7 @@ class ItemController extends Controller
      *          name="last_name",
      *          description="Item last name",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -334,7 +334,7 @@ class ItemController extends Controller
      *          name="phone_number",
      *          description="Item uniq phone number",
      *          required=true,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -343,7 +343,7 @@ class ItemController extends Controller
      *          name="country_code",
      *          description="Item country code",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )
@@ -352,7 +352,7 @@ class ItemController extends Controller
      *          name="timezone_name",
      *          description="Item timezone",
      *          required=false,
-     *          in="path",
+     *          in="query",
      *          @OA\Schema(
      *              type="string"
      *          )

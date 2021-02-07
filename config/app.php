@@ -117,7 +117,9 @@ return [
     |
     */
 
-    'api_items_per_page' => env('API_ITEMS_PER_PAGE', 2),
+    'items_per_page' => env('APP_ITEMS_PER_PAGE', 2),
+    'hostaway_cache_time' => env('APP_HOSTAWAY_CACHE_TIME', 60*60),
+    'transaction_retry' => env('APP_TRANSACTION_RETRY', 3),
 
     /*
     |--------------------------------------------------------------------------

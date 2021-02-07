@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Route;
 
 use Exception;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -62,6 +62,7 @@ class RouteTest extends TestCase
         return '&api_token=24f56647eddc650bd0904883dd7168e609017696cf69714fe7d1224012491710';
     }
 
+
     // API docs
     public function testApiDocs(): void
     {
@@ -75,7 +76,7 @@ class RouteTest extends TestCase
     public function testApiItems(): void
     {
         $response = $this->get('/api/items?' . $this->getTokenStr());
-
+        var_dump($response);
         $response->assertStatus(200);
 
         // Check that there is list of items in the response
@@ -85,7 +86,7 @@ class RouteTest extends TestCase
     public function testApiItemsSearch(): void
     {
         $response = $this->get('/api/items?q=a' . $this->getTokenStr());
-
+        var_dump($response);
         $response->assertStatus(200);
 
         // Check that there is list of items in the response
