@@ -76,7 +76,7 @@ class RouteTest extends TestCase
     public function testApiItems(): void
     {
         $response = $this->get('/api/items?' . $this->getTokenStr());
-        var_dump($response->getContent());
+        var_dump($response->getOriginalContent());
         $response->assertStatus(200);
 
         // Check that there is list of items in the response
@@ -86,7 +86,7 @@ class RouteTest extends TestCase
     public function testApiItemsSearch(): void
     {
         $response = $this->get('/api/items?q=a' . $this->getTokenStr());
-        var_dump($response->getContent());
+
         $response->assertStatus(200);
 
         // Check that there is list of items in the response
