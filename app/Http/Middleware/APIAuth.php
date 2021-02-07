@@ -19,6 +19,7 @@ class APIAuth
     public function handle(Request $request, Closure $next)
     {
         if (App::environment() !== 'local') {
+            // API token can get from header or request
             $apiToken = $request->header('X-Auth-Token', null);
             $apiToken = $request->api_token ?: $apiToken;
 
@@ -26,11 +27,9 @@ class APIAuth
                 $userFound = User::where('api_token', '=', $apiToken)->first() ?: null;
             }
 
-            if ($apiToken && $userFound) {
-                return $next($request);
+            if (!($apiToken && $userFound)) {
+                return response('Unauthorized', 401);
             }
-
-            return response('Unauthorized', 401);
         }
 
         return $next($request);

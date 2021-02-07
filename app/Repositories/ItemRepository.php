@@ -88,14 +88,12 @@ class ItemRepository
     public function save(array $data): Item
     {
         $item = new $this->item;
-
         $item->first_name = $data['first_name'];
         $item->last_name = $data['last_name'];
         $item->phone_number = $data['phone_number'];
         $item->country_code = $data['country_code'];
         $item->timezone_name = $data['timezone_name'];
 
-        //todo one string
         $item->save();
 
         return $item->fresh();
