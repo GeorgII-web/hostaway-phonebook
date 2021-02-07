@@ -19,15 +19,20 @@ class LogRoute
     public function handle(Request $request, Closure $next)
     {
         $response = $next($request);
-
         $log = [
-            'URI' => $request->getUri(),
-            'METHOD' => $request->getMethod(),
             'REQUEST_BODY' => $request->all(),
             'RESPONSE' => $response->getContent(),
         ];
 
-        Log::channel('api')->info(json_encode($log, JSON_THROW_ON_ERROR));
+        Log::channel('api')->info(
+            implode(' ',
+                [
+                    $request->getMethod(),
+                    $request->getUri(),
+                    json_encode($log, JSON_THROW_ON_ERROR),
+                ]
+            )
+        );
 
         return $response;
     }

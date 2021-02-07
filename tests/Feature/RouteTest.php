@@ -62,10 +62,10 @@ class RouteTest extends TestCase
         return '&api_token=24f56647eddc650bd0904883dd7168e609017696cf69714fe7d1224012491710';
     }
 
-    // Home
-    public function testHome(): void
+    // API docs
+    public function testApiDocs(): void
     {
-        $response = $this->get('/');
+        $response = $this->get('/api/documentation');
 
         $response->assertStatus(200);
     }

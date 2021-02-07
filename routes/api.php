@@ -14,9 +14,7 @@ use App\Http\Controllers\ItemController;
 |
 */
 
-Route::middleware('throttle:200,1')
-    ->middleware('log.route')
-    ->middleware('token')
+Route::middleware(['throttle:200,1', 'log.api', 'auth.token'])
     ->group(function () {
 
         Route::resource('items', ItemController::class);

@@ -18,7 +18,7 @@ class APIAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if (App::environment() !== 'local') {
+        if (App::environment() !== 'local') { //todo token local??
             // API token can get from header or request
             $apiToken = $request->header('X-Auth-Token', null);
             $apiToken = $request->api_token ?: $apiToken;
