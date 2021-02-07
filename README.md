@@ -1,7 +1,18 @@
 # Hostaway phone book API project
 - Dev server [http://localhost](http://localhost)
 - API documentation [http://localhost/api/documentation](http://localhost/api/documentation)
-- Example [http://localhost/api/items](http://localhost/api/items)
+- Example query [http://localhost/api/items](http://localhost/api/items)
+
+### Features
+- API pagination with metadata
+- API auth token 
+- Logging all API queries to '', errors to '' 
+- Caching external API calls
+- Docker support, Laravel sail
+- Open API [documentation](http://localhost/api/documentation)
+- GitHub Actions - auto testing on push
+- Validation by value type, DB query, API calls
+- Middleware logging and auth checking
 
 ### Development installation instructions
 
