@@ -9,15 +9,15 @@
 - ![Test](public/images/test.png?raw=true "Test")
 
 ### Features
-- API pagination with metadata
-- API auth token 
+- API CRUD, pagination with metadata, auth token 
 - Logging all API queries to 'api.log', errors to 'error.log' 
-- Caching external API calls
 - Docker support, Laravel sail
 - Open API [documentation](http://localhost/api/documentation)
 - GitHub Actions - auto testing on push
-- Validation by value type, DB query, API calls
+- Caching external API calls
+- Validation by value type, DB query, external API calls
 - Middleware logging and auth checking
+- DB create, migrate, seed
 
 ### Development installation instructions
 
